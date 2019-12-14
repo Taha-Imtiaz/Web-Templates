@@ -1,0 +1,517 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body
+{
+    overflow-x: hidden;
+}
+html
+{
+    font-size: 62.5%;
+}
+.flex
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container
+{
+    display: grid;
+    grid-template-rows: minmax(3vh,min-content) 10vh 16vh minmax(10vh,min-content) min-content minmax(50vh,min-content) 10vh;
+    grid-template-columns: minmax(5rem ,1fr) minmax(min-content,118rem) minmax(5rem, 1fr);
+    grid-template-areas: "top top top" 
+                        "nav nav nav" 
+                        "Portfolio  Portfolio Portfolio " 
+                        ". details ." 
+                        ". Recentlogo ."
+                        "contact contact contact"
+                         "features features features";
+/* margin-bottom: 5rem; */
+}
+/* top section */
+.top
+{
+    display: grid;
+    grid-area: top;
+    background: rgb(139, 125, 180);
+    font-size: 1.2rem;
+    font-family: 'Arial, Helvetica, sans-serif';
+    grid-template-columns: 55fr repeat(4,10fr) 5fr;
+    grid-template-areas: " . request chat call account .";
+}
+.request
+{
+    grid-area: request;
+    cursor: pointer;
+}
+.chat
+{
+    grid-area: chat;
+    cursor: pointer;
+}
+.call
+{
+    grid-area: call;
+    cursor: pointer;
+}
+.account
+{
+    grid-area: account;
+    cursor: pointer;
+}
+/* nav section */
+.nav
+{
+    grid-area: nav;
+    background: rgb(99, 64, 129);
+    font-size: 2rem;
+    font-family: 'Arial, Helvetica, sans-serif';
+}
+/* Portfolio Section */
+.Portfolio
+{
+    grid-area: Portfolio;
+    background: rgb(49, 20, 56);
+    display: grid;
+    grid-template-columns: 10fr 40fr 50fr;
+    grid-template-areas: ". headPortfolio .";
+
+}
+.headPortfolio
+{
+    grid-area: headPortfolio;
+    -webkit-text-fill-color: white;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+/* details section */
+.details
+{
+    grid-area: details;
+    font-size: 2.3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-rows: 5vh 40vh;
+    grid-template-columns: 100fr ;
+    grid-template-areas: ".   "
+                        " contentarea ";
+    /* background: darkblue */
+}
+
+.details h1
+{
+    font-size:3rem;
+    color: rgb(58, 58, 58);
+    font-weight: bolder;
+}
+.details .content
+{
+    font-size: 1.6rem;
+    color: rgb(58, 58, 58);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 500;
+
+}
+.contentarea
+{
+    grid-area: contentarea;
+}
+.contentarea button
+{
+    background: rgb(221, 19, 19);
+    color: white;
+    font-size: 1.6rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    width: 18rem;
+    height: 6rem;
+    border-radius: 1rem;
+
+}
+/* recentlogo section */
+.Recentlogo
+{
+
+    grid-area: Recentlogo;
+    margin: 6rem;
+    display: grid;
+    grid-template-rows:  5fr 75fr repeat(2,10fr);
+    grid-template-areas:  "logohead"
+                        "gridsec"
+                        "button" 
+                         ".";
+    /* grid-gap: 1rem; */
+}
+.Recentlogo h1
+{
+ margin-bottom: 4rem;
+font-size: 2.5rem;
+color: rgb(58, 58, 58);
+
+
+}
+.logohead
+{
+    grid-area: logohead;
+}
+.grid
+{
+    grid-area: gridsec;
+
+    grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+    display: grid;
+    grid-gap: 5rem;
+    /* background: seagreen; */
+}
+.griddetails
+{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* height: 20rem; */
+    background: cornflowerblue;
+}
+.button
+{
+    grid-area: button;
+    /* background: purple; */
+}
+
+/* contact */
+
+.contact
+{
+    grid-area: contact;
+    
+    margin-top: 12rem;
+     display: grid;
+    grid-template-rows: 40fr 60fr; 
+    /* grid-template-columns:  repeat(4,25fr) ; */
+    grid-template-areas: " contacts"
+                            " pics";
+    background: rgb(12, 43, 83);
+}
+.contacts h1
+{
+    margin: 3rem 0;
+    grid-area: contacts;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.8rem;
+}
+.pics
+{
+    grid-area: pics;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns:10fr  repeat(4,20fr) 10fr;
+    grid-template-areas: " .  pic1 pic2 pic3 pic4 .";
+
+}
+.pic1
+{
+grid-area: pic1;
+/* background: yellow */
+
+}
+.pic1  img
+{
+    width: 8rem;
+    grid-row: 1/span 2;
+    /* background: white */
+}
+.pic1 .detail1 
+{
+    padding-left: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    color: white
+}
+.pic2
+{
+grid-area: pic2;
+/* background: violet */
+}
+.pic2 img
+{
+    width: 8rem;
+    grid-row: 1/span 2;
+}
+.pic2 .detail2 
+{
+    padding-left: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    color: white
+}
+.pic3
+{
+grid-area: pic3;
+/* background: turquoise */
+}
+.pic3 img
+{
+    width: 8rem;
+    grid-row: 1/span 2;
+}
+ .pic3 .detail3  
+{
+    padding-left: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    color: white
+}
+.pic4
+{
+grid-area: pic4;
+/* background: rebeccapurple */
+}
+.pic4  img
+{
+    width: 8rem;
+    grid-row: 1/span 2;
+    /* background: white */
+}
+.pic4 .detail4 
+{
+    padding-left: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    color: white
+}
+/* features */
+.features
+{
+    grid-area: features;
+    display: grid;
+    grid-template-columns: 30fr 70fr;
+    grid-template-areas: "morefeture image";
+}
+.morefeture
+{
+    grid-area: morefeture;
+    background: red;
+    color: white;
+    font-size: 1.8rem;
+    /* top: calc(100%-25px) */
+}
+.image
+{
+    grid-area: image;
+    background: rgb(5, 5, 24)
+}
+@media only screen and (max-width:1200px)
+{
+    html
+    {
+        font-size: 60%;
+    }
+    .pics img 
+    {
+        font-size: 6.5rem;
+    }
+    .top
+{
+    display: grid;
+    grid-area: top;
+    background: rgb(139, 125, 180);
+    font-size: 1.2rem;
+    font-family: 'Arial, Helvetica, sans-serif';
+    grid-template-columns: 45fr repeat(4,12fr) 7fr;
+    grid-template-areas: " . request chat call account .";
+}
+.details h1
+{
+    font-size: 2.3rem;
+}
+}
+@media only screen and (max-width:1100px)
+{
+    html
+    {
+        font-size: 56%;
+    }
+
+    .pics img 
+    {
+        font-size: 5rem;
+    }
+    .pics p
+    {
+        font-size: 1.4rem;
+    }
+    .pics h1
+    {
+        font-size: 2rem
+    }
+    .container
+{
+    display: grid;
+    grid-template-rows: minmax(3vh,min-content) 10vh 16vh minmax(10vh,min-content) min-content minmax(50vh,min-content) 10vh;
+    grid-template-columns: minmax(5rem ,1fr) minmax(min-content,100rem) minmax(5rem, 1fr);
+    grid-template-areas: "top top top" 
+                        "nav nav nav" 
+                        "Portfolio  Portfolio Portfolio " 
+                        ". details ." 
+                        "Recentlogo Recentlogo Recentlogo "
+                        "contact contact contact"
+                         "features features features";
+/* margin-bottom: 5rem; */
+}
+.features
+{
+    grid-area: features;
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: 1fr;
+    grid-template-areas: "morefeture" 
+                            "image";
+}
+.image img
+{
+    width: 100rem;
+}
+.pics
+{
+    grid-area: pics;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns:10fr  repeat(2,40fr) 10fr;
+    grid-template-areas: " .  pic1 pic2  ."
+                            ". pic3 pic4 .";
+}
+}
+@media only screen and (max-width:1000px)
+{
+    html
+    {
+        font-size: 52%;
+    }
+.top
+{
+    display: grid;
+    grid-area: top;
+    background: rgb(139, 125, 180);
+    font-size: 1.2rem;
+    font-family: 'Arial, Helvetica, sans-serif';
+    grid-template-columns: 36fr repeat(4,14fr) 8fr;
+    grid-template-areas: " . request chat call account .";
+}
+}
+@media only screen and (max-width:850px)
+{
+    html
+    {
+        font-size: 47%;
+    }
+    .image img
+{
+    width: 90rem;
+}
+
+}
+@media only screen and (max-width:700px)
+{
+    html
+    {
+        font-size: 45%;
+    }
+
+.container
+{
+    display: grid;
+    grid-template-rows: minmax(3vh,min-content) 10vh 16vh minmax(10vh,min-content) min-content minmax(50vh,min-content) 10vh;
+    grid-template-columns: minmax(5rem ,1fr) minmax(min-content,65rem) minmax(5rem, 1fr);
+    grid-template-areas: "top top top" 
+                        "nav nav nav" 
+                        "Portfolio  Portfolio Portfolio " 
+                        ". details ." 
+                        "Recentlogo Recentlogo Recentlogo "
+                        "contact contact contact"
+                         "features features features";
+/* margin-bottom: 5rem; */
+}
+.image img
+{
+    width: 70rem;
+}
+.top
+{
+    display: grid;
+    grid-area: top;
+    background: rgb(139, 125, 180);
+    font-size: 1.2rem;
+    font-family: 'Arial, Helvetica, sans-serif';
+    grid-template-columns: 32fr repeat(4,15fr) 8fr;
+    grid-template-areas: " . request chat call account .";
+}
+}
+@media only screen and (max-width:600px)
+{
+    html
+    {
+        font-size: 42%;
+    }
+}
+@media only screen and (max-width:490px)
+{
+    html
+    {
+        font-size: 39%;
+    }
+    .image img
+{
+    width: 56rem;
+}
+}
+@media only screen and (max-width:420px)
+{
+    html
+    {
+        font-size: 37%;
+    }
+    .image img
+    {
+    width: 48rem;
+    }
+    .pics
+    {
+        grid-area: pics;
+        display: grid;
+        grid-gap: 2rem;
+        grid-template-rows:  repeat(4,25fr) ;
+        grid-template-columns: 1fr;
+        grid-template-areas:    "pic1"
+                                "pic2"  
+                                " pic3" 
+                                "pic4" ;
+    }
+
+}
+@media only screen and (max-width:360px)
+{
+    html
+    {
+        font-size: 35%;
+    }
+    .top
+{
+    display: grid;
+    grid-area: top;
+    background: rgb(139, 125, 180);
+    font-size: 1.2rem;
+    font-family: 'Arial, Helvetica, sans-serif';
+    grid-template-columns: 25fr repeat(4,17fr) 7fr;
+    grid-template-areas: " . request chat call account .";
+}
+
+
+.contacts h1
+{
+    font-size: 2rem;
+}
+}

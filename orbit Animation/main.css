@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body
+{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    /* background: lightcoral; */
+}
+.container
+{
+    width: 100%;
+    height: 100%;
+    background: lightgreen;
+}
+.outercircle
+{
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    /* background: gray; */
+}
+.orbit
+{
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    border: 3px solid lightseagreen;
+    position: relative;
+    animation: orbit 2s linear infinite ;
+}
+.sm-circle
+{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%; 
+    position: absolute;
+}
+.sm-circle1
+{
+   
+    background: black;
+    left: calc(30% - 18px);
+    
+}
+.sm-circle2
+{
+   
+    background: lightseagreen;
+    top:calc(80% - 36px);
+    left: calc(100% - 36px)
+}
+.sm-circle3
+{
+   
+    background: yellow;
+    top:calc(80% - 36px);
+    left: calc(20% - 66px)
+}
+.circle
+{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: red;
+    position: absolute;
+    top: calc(50% - 100px);
+    left:calc(50% - 100px) ;
+}
+.flex
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes orbit
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}

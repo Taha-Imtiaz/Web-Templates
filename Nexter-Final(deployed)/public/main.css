@@ -1,0 +1,1013 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+html
+{
+    font-size: 62.5%;
+    /* 1rem=10px */
+}
+body
+{
+    overflow-x: hidden;
+    /* background: lightsalmon; */
+}
+
+:root
+{
+     /* COLOR VARIABLES */
+--color-primary: #c69963;
+--color-primary-dark: #B28451;
+
+--color-secondary: #101d2c;
+
+--color-grey-light-1: #f9f7f6;
+--color-grey-light-2: #aaa;
+
+--color-grey-dark-1: #54483A;
+--color-grey-dark-2: #6D5D4B;
+
+/* // FONT VARIABLES */
+--font-primary: 'Nunito', sans-serif;
+--font-display: 'Josefin Sans', sans-serif;
+}
+.container
+{
+    display: grid;
+    grid-template-rows: 80vh min-content 40vw repeat(3,min-content);
+    grid-template-columns: 8rem minmax(5rem,1fr) repeat(6,minmax(min-content,20rem)) minmax(5rem,1fr);
+    grid-template-areas: "nav header header header header header realtors realtors realtors"
+                        "nav . services services services services services services ."
+                        "nav goals goals goals goals story story story story"
+                        "nav . homes homes homes homes homes homes ."
+                        "nav gallery gallery gallery gallery gallery gallery gallery gallery"
+                        "nav footer  footer  footer  footer  footer  footer  footer  footer ";
+/* padding: 0 0.05rem; */
+}
+.nav
+{
+    grid-area: nav;
+    background: var(--color-primary-dark);
+     padding-top: 4rem;
+     display: flex;
+     justify-content: center;
+}
+
+.ham
+{
+    
+    background: white;
+    width: 4.5rem;
+    height:2px;
+}
+.ham::before
+{
+    content: "";
+    /* margin-top: 1rem; */
+    color: white;
+    background: white;
+    transform: translateY(-1.5rem);
+    display: block;
+   width: 4.5rem;
+    height: 2px;
+}
+.ham::after
+{
+    content:"";
+    /* margin-top: 1rem; */
+    background: white;
+    color: white;
+    transform: translateY(+1.5rem);
+    display: block;
+    width: 4.5rem;
+    height: 2px;
+}
+.header
+{
+    grid-area: header;
+    background:linear-gradient(rgba(16, 29, 44,0.9),rgba(16, 29, 44,0.9)),url("./Nexter/final/img/hero.jpeg");
+    background-size: 100% 100%,cover;
+    display: grid;
+    padding: 8rem; 
+    padding-top: 4rem;
+    grid-template-rows: 1fr min-content 10rem 1fr 7rem 2.5rem;
+    grid-template-columns: 100fr;
+    line-height: 4rem;
+    
+}
+.header-icon img
+{
+    
+    height: 3rem;
+    transform: translate3d(-3rem,-3rem,0);
+    justify-self: center;
+}
+
+.headerheading
+{
+    color: var(--color-primary);
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    /* margin-bottom: -1rem; */
+    text-transform: uppercase;
+}
+
+.headersecheading
+{
+    color: white;
+    font-family: var(--font-display);
+    font-size: 2.7rem;
+    line-height: 4rem;
+    /* margin-bottom: 1rem; */
+    font-weight: lighter;
+    text-transform: capitalize;
+}
+.headerBtn
+{
+    color: white;
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+   background: var(--color-primary);
+   justify-self: flex-start;
+   padding: 0.8rem;
+   margin-top: -1rem;
+   align-self: flex-start;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+.headerBtn:hover
+{
+    background: var(--color-primary-dark);
+    transform: translateY(-1rem)
+}
+.seenon
+{
+    font-size: 1.6rem;
+    color: var(--color-grey-light-2);
+    font-family: var(--font-display);
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    align-items: center;
+    grid-column-gap: 1.5rem;
+}
+.seenon::before,.seenon::after
+{
+    content: '';
+    height: 1px;
+    background: var(--color-grey-light-2);
+    width: 100%;
+
+}
+.headerlogo
+{
+    display: grid;
+    /* grid-template-rows: 100fr; */
+    grid-template-columns:  repeat(4,1fr);
+    grid-gap: 7rem;
+    
+    grid-template-areas: "image1 image2 image3 image4"
+}
+.image1
+{
+    grid-area: image1;
+    background: url("./Nexter/final/img/logo-bbc.png");
+    background-size: 100% 100%,cover;
+    width: 100%;
+    object-fit: contain;
+    
+}
+.image4
+{
+    grid-area: image4;
+    background: url("./Nexter/final/img/logo-bi.png");
+    background-size: 100% 100%,cover;
+    width: 100%;
+    object-fit: contain;
+    
+}
+.image2
+{
+    grid-area: image2;
+    background: url("./Nexter/final/img/logo-forbes.png");
+    background-size: 100% 100%,cover;
+    width: 100%;
+    object-fit: contain;
+    
+}
+.image3
+{
+    grid-area: image3;
+    background: url("./Nexter/final/img/logo-techcrunch.png");
+    background-size: 100% 100%,cover;
+    width: 100%;
+    object-fit: contain;
+}
+.realtors
+{
+    grid-area: realtors;
+    background: linear-gradient(rgba(16, 29, 44,1),rgba(16, 29, 44,1));
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    grid-row-gap: 2rem;
+}
+.realtors h3
+{
+   
+   color: var(--color-primary-dark);
+   font-family: var(--font-primary);
+   font-size: 2rem;
+
+}
+.realtorList
+{
+    display: grid;
+    grid-template-columns:  min-content max-content;
+    grid-row-gap: 5vh;
+    grid-column-gap: 2rem;
+    align-items: center;
+}
+.realtorList img
+{
+    border-radius: 50%;
+    width: 7rem;
+    /* grid-row: 1/span 1.5; */
+}
+.realtorInfo h1
+{
+    color: white;
+    font-family: var(--font-display);
+    font-size: 1.9rem;
+    
+    font-weight: normal;
+    text-transform: capitalize;
+}
+.realtorInfo h4
+{
+    margin-top: 0.2rem;
+    color: var(--color-grey-light-2);
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    
+    font-weight: normal;
+    text-transform: capitalize;
+}
+
+.services
+{
+    grid-area: services;
+   display: grid;
+   /* background: red; */
+   grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+   margin: 20rem 0;
+   grid-column-gap: 2rem;
+   grid-row-gap: 8rem;
+}
+.service
+{
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-row-gap: 1rem;
+    grid-column-gap: 2rem;
+    align-content: flex-start;
+}
+.serviceicon
+{
+    width: 5rem;
+    height: 5rem;
+    grid-row: 1/span 2;
+    fill: var(--color-primary);
+    transform: translateY(-1rem);
+}
+.serviceHeading
+{
+   
+    font-family: var(--font-primary);
+    font-size: 2rem;
+    margin: 0.5rem 0;
+}
+.serviceContent
+{
+    font-family: var(--font-primary);
+    font-size: 1.5rem;
+    fill: var(--color-secondary-dark);
+    line-height: 2.5rem;
+}
+.goals
+{
+    grid-area: goals;
+    background: linear-gradient(rgba(198, 153, 99,0.5),rgba(198, 153, 99,0.5)),url("Nexter//final//img//back.jpg");
+    background-size: 100% 100%,cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.goalsCenter
+{
+    width: 70%;
+    height: 50%;
+}
+.goalsOut
+{
+    width: 65%;
+    height: 40%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.story
+{
+    grid-area: story;
+    background: var(--color-grey-light-1);
+     padding: 6rem 12rem;
+     
+}
+.story>h4
+{
+    color: var(--color-primary);
+    font-size: 1.6rem;
+    font-family: var(-var(--font-primary));
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    font-weight: normal;
+}
+.story >h1
+{
+    font-size: 3.2rem;
+    font-family: var(--font-primary);
+    font-style: italic;
+    color: var(--color-grey-dark-1);
+     margin-bottom: 2rem;
+
+}
+.story>p
+{
+    font-size: 1.5rem;
+    font-family:var(--font-primary);
+    line-height: 2.5rem;
+    margin-bottom: 2rem;
+    font-style: italic;
+    color: var(--color-grey-dark-1);
+}
+.story>h3
+{
+    background: var(--color-primary);
+    padding: 2rem;
+    text-align: center;
+    color: var(--color-grey-light-1);
+    font-size: 1.5rem;
+    font-weight: normal;
+    font-family: var(--font-primary);
+    text-transform: uppercase;
+  
+}
+.story h3:hover
+{
+    background: var(--color-primary-dark)
+}
+.flex
+{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-flow: column;
+}
+.homes
+{
+    grid-area: homes;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+    grid-gap: 8rem;
+    margin: 14rem 0;
+}
+.home
+{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-items: center;
+    align-items: center;
+    background:var(--color-grey-light-1)
+}
+.homeImg
+{
+    grid-column: 1/span 2;
+    position: relative;
+}
+.home-property
+{
+    background: black;
+    position: absolute;
+    color: white;
+    font-family: var(--font-primary);
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    
+    padding: 2rem 0;
+    width: 80%;
+    bottom: -2.2rem;
+    left: 10%;
+}
+.heartIcon
+{
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    top: 3%;
+    right: 4%;
+    fill: white;
+    transition: fill 300ms ease-in-out;
+    cursor: pointer;
+}
+.heartIcon:hover
+{
+    fill:rgba(255, 0, 0, 0.6);
+}
+.contactRealterBtn
+{
+    background: var(--color-primary);
+    color: white;
+    justify-self: stretch;
+    align-self: stretch;
+    padding: 1.7rem;
+    font-family: var(--font-primary);
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 2rem;
+    grid-column: 1/span 2;
+    transition: all 300ms ease-in-out;
+}
+.contactRealterBtn:hover
+{
+    background: var(--color-primary-dark);
+}
+.home-Details
+{
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    margin-top: 3rem;
+    font-family: var(--font-primary);
+    color: var(--color-grey-dark-2)
+}
+.home-pic
+{
+    width: 100%;
+}
+.gallery
+{
+    grid-area: gallery;
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: repeat(7,6vw);
+    background: var(--color-grey-light-1);
+    padding: 1.5rem;
+    grid-gap: 1.5rem;
+}
+.pic
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.pic1
+{
+    grid-row: 1/span 2;
+    grid-column: 1/span 2;
+    
+}
+.pic2
+{
+    grid-row: 1/span 3;
+    grid-column: 3/span 3;
+    
+}
+.pic3
+{
+    grid-row: 1/span 2;
+    grid-column: 6/span 1;
+    
+}
+.pic4
+{
+    grid-row: 1/span 2;
+    grid-column: 7/span 2;
+    
+}
+.pic5
+{
+    grid-row: 3/span 3;
+    grid-column: 1/span 2;
+    
+}
+.pic6
+{
+    grid-row: 4/span 2;
+    grid-column: 3/span 2;
+    
+}
+.pic7
+{
+    grid-row: 4/span 1;
+    grid-column: 5/span 1;
+    
+}
+.pic8
+{
+    grid-row: 3/span 2;
+    grid-column: 6/span 2;
+    
+}
+.pic9
+{
+    grid-row: 3/span 3;
+    grid-column: 8/span 1;
+    
+}
+.pic10
+{
+    grid-row: 6/span 2;
+    grid-column: 1/span 1;
+    
+}
+.pic11
+{
+    grid-row: 6/span 2;
+    grid-column: 2/span 2;
+    
+}
+.pic12
+{
+    grid-row: 6/span 2;
+    grid-column: 4/span 1;
+    
+}
+.pic13
+{
+    grid-row: 5/span 3;
+    grid-column: 5/span 3;
+    
+}
+.pic14
+{
+    grid-row: 6/span 2;
+    grid-column: 8/span 1;
+}
+.footer
+{
+    grid-area: footer;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 8rem 5rem; 
+}
+.same
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer .elements
+{ 
+display: grid;
+grid-template-columns: repeat(auto-fit,minmax(15rem,1fr)); 
+grid-row-gap: 5rem;
+grid-column-gap: 1.5rem;
+
+color: white;
+font-family: var(--font-primary);
+text-transform: uppercase;
+font-size: 1.6rem;
+line-height: 2.2rem;
+
+transition: all 500ms ease-in-out;
+/* padding-bottom:8rem; */
+}
+.element:hover
+{
+    transform: translateY(-1.1rem);
+    background: rgba(255, 255, 255, 0.1)
+}
+.footer p
+{
+    /* padding-left:15rem; */
+    font-family: var(--font-display);
+    color: darkgray;
+    font-size: 1.6rem;
+   
+    /* width: 75%; */
+    line-height: 2.5rem;
+    /* margin: 0,100rem; */
+    margin-top: 6rem;
+   margin-bottom: 4rem;
+}
+/* larger desktop/laptops screens  */
+@media only screen and (min-width:1300px)
+{
+    html
+    {
+        font-size: 62.5%;
+    }
+    .headerBtn
+    {
+       margin-top: -5rem;
+    }
+   
+}
+/*screens having normal desktop/laptop  */
+@media only screen and (max-width:1300px)
+{
+    html
+    {
+        font-size: 60%;
+    }
+    .headerBtn
+    {
+        margin-top: -4rem;
+    }
+   .story 
+{
+    align-items: stretch;
+    justify-items: stretch;
+}
+.story h4
+{
+    margin-top: 6rem;
+}
+.story h3
+{
+    padding: 1.7rem;
+    margin-bottom: 6rem;
+}
+.services
+{
+    grid-area: services;
+   display: grid;
+   /* background: red; */
+   grid-template-columns: repeat(auto-fit,minmax(28rem,1fr));
+   margin: 20rem 0;
+   grid-column-gap: 2rem;
+   grid-row-gap: 8rem;
+}
+.homes
+{
+    grid-area: homes;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(29rem,1fr));
+    grid-gap: 8rem;
+    margin: 14rem 0;
+}
+}
+@media only screen and  (max-width:1000px)
+{
+    html
+    {
+        font-size: 55%;
+    }
+    
+.container
+{
+   
+    grid-template-rows: 10vh 90vh min-content 40vw repeat(3,min-content);
+    grid-template-columns:  minmax(5rem,1fr) repeat(6,minmax(min-content,20rem)) minmax(5rem,1fr);
+    grid-template-areas: "nav nav nav nav nav nav nav nav"
+                        "header header header header header realtors realtors realtors"
+                        ". services services services services services services ."
+                        "goals goals goals goals story story story story"
+                        ". homes homes homes homes homes homes ."
+                        "gallery gallery gallery gallery gallery gallery gallery gallery"
+                        "footer  footer  footer  footer  footer  footer  footer  footer ";
+
+}
+.headerBtn
+    {
+        margin-top: -4rem;
+    }
+.story h4
+{
+    margin-top: 10rem;
+}
+.story h3
+{
+    padding: 1.7rem;
+    margin-bottom: 10rem;
+}
+.story 
+{
+    align-items: stretch;
+    justify-items: stretch;
+}
+
+.headerlogo
+{
+    height: 3rem;
+    /* width: 100%; */
+}
+.nav
+{
+    
+     padding-right: 1.5rem;
+     
+     justify-content: flex-end;
+     align-items: flex-start;
+}
+.ham
+{
+    width: 3rem;
+    margin-top: -0.8rem;
+    height: 2px;
+}
+.ham::before
+{
+   width: 3rem;
+   height: 2px;
+   transform: translateY(-1rem)
+}
+.ham::after
+{
+    width: 3rem;
+   height: 2px;
+   transform: translateY(1rem)
+}
+}
+
+
+@media only screen and (max-width:900px)
+{
+html
+{
+    font-size: 50%;
+}
+
+}
+/* for mobiles */
+@media only screen and (max-width:800px) 
+{
+
+    .container
+{
+   
+    grid-template-rows: 10vh min-content 40vh min-content 40vw 40vw repeat(3,min-content);
+    grid-template-columns:  minmax(5rem,1fr) repeat(6,minmax(min-content,20rem)) minmax(5rem,1fr);
+    grid-template-areas: "nav nav nav nav nav nav nav nav"
+                        "header header header header header header header header"
+                        "realtors realtors realtors realtors realtors realtors realtors realtors"
+                        ". services services services services services services ."
+                        "story story story story story story story story"
+                        "goals goals goals goals goals goals goals goals"
+                        ". homes homes homes homes homes homes ."
+                        "gallery gallery gallery gallery gallery gallery gallery gallery"
+                        "footer  footer  footer  footer  footer  footer  footer  footer ";
+
+}
+  .headerBtn
+    {
+        margin-top: -4rem;
+        margin-bottom: 10rem;
+    }
+    .ham
+{
+    width: 3rem;
+    margin-top: 0.8rem;
+    height: 2px;
+}
+.ham::before
+{
+   width: 3rem;
+   height: 2px;
+   transform: translateY(-1rem)
+}
+.ham::after
+{
+    width: 3rem;
+   height: 2px;
+   transform: translateY(1rem)
+}
+    .realtors
+    {
+        grid-auto-flow: column;
+    }
+    .realtors h3
+    {
+        margin-top: -4rem;
+        font-size: 1.8rem;
+        
+    }
+    .story h3
+    {
+        justify-self: flex-start;
+        align-self: flex-start
+    }
+    .goals
+    {
+        position: relative;
+
+    }
+    .goalsCenter
+    {
+        position: absolute;
+        left:10%;
+        top: 10%;
+        width: 50%;
+        height: 70%;
+    }
+    .goalsOut
+    {
+        position: absolute;
+        left:50%;
+        top: 40%;
+        width: 40%;
+        height: 50%;
+    }
+    .headerheading
+    {
+        margin-top: 8rem;
+    }
+   
+}
+
+@media only screen and (max-width:600px) 
+{
+       .container
+{
+   
+    grid-template-rows: 10vh min-content min-content min-content 50vw 40vw repeat(3,min-content);
+    grid-template-columns:  minmax(6rem,1fr) repeat(6,minmax(min-content,18rem)) minmax(6rem,1fr);
+    grid-template-areas: "nav nav nav nav nav nav nav nav"
+                        "header header header header header header header header"
+                        "realtors realtors realtors realtors realtors realtors realtors realtors"
+                        ". services services services services services services ."
+                        "story story story story story story story story"
+                        "goals goals goals goals goals goals goals goals"
+                        ". homes homes homes homes homes homes ."
+                        "gallery gallery gallery gallery gallery gallery gallery gallery"
+                        "footer  footer  footer  footer  footer  footer  footer  footer ";
+
+}
+.ham
+{
+    width: 3rem;
+    margin-top: -2rem;
+    height: 2px;
+}
+.ham::before
+{
+   width: 3rem;
+   height: 2px;
+   transform: translateY(-1rem)
+}
+.realtors h3
+{
+    margin-top: 2rem;
+}
+    .realtors
+    {
+        grid-auto-flow: row;
+        justify-items: center;
+        
+    }
+}
+@media only screen and (max-width:500px)
+{
+        .container
+{
+   
+    grid-template-rows: 7vh min-content 55vh min-content 70vw 40vw repeat(3,min-content);
+    grid-template-columns:  minmax(5rem,1fr) repeat(6,minmax(min-content,20rem)) minmax(5rem,1fr);
+    grid-template-areas: "nav nav nav nav nav nav nav nav"
+                        "header header header header header header header header"
+                        "realtors realtors realtors realtors realtors realtors realtors realtors"
+                        ". services services services services services services ."
+                        "story story story story story story story story"
+                        "goals goals goals goals goals goals goals goals"
+                        ". homes homes homes homes homes homes ."
+                        "gallery gallery gallery gallery gallery gallery gallery gallery"
+                        "footer  footer  footer  footer  footer  footer  footer  footer ";
+
+}
+    html
+    {
+        font-size: 48%;
+    }
+    .headersecheading
+    {
+        line-height: 4rem;
+        font-size: 300%;
+        margin-top: 2rem;
+    }
+    .headerBtn
+    {
+        margin-top: 1rem;
+    }
+    .story h4
+{
+    margin-top: 15rem;
+}
+.story h3
+{
+    padding: 1.7rem;
+    margin-bottom: 15rem;
+}
+.story 
+{
+    align-items: stretch;
+    justify-items: stretch;
+}
+.ham
+{
+    width: 3rem;
+    margin-top: -2rem;
+    height: 2px;
+}
+.ham::before
+{
+   width: 3rem;
+   height: 2px;
+   transform: translateY(-1rem)
+}
+}
+@media only screen and (max-width:400px)
+{
+      .container
+{
+   
+    grid-template-rows: 7vh min-content 55vh min-content 85vw 40vw repeat(3,min-content);
+    grid-template-columns:  minmax(5rem,1fr) repeat(6,minmax(min-content,20rem)) minmax(5rem,1fr);
+    grid-template-areas: "nav nav nav nav nav nav nav nav"
+                        "header header header header header header header header"
+                        "realtors realtors realtors realtors realtors realtors realtors realtors"
+                        ". services services services services services services ."
+                        "story story story story story story story story"
+                        "goals goals goals goals goals goals goals goals"
+                        ". homes homes homes homes homes homes ."
+                        "gallery gallery gallery gallery gallery gallery gallery gallery"
+                        "footer  footer  footer  footer  footer  footer  footer  footer ";
+
+}
+.ham
+{
+    width: 3rem;
+    margin-top: -2rem;
+    height: 2px;
+}
+.ham::before
+{
+   width: 3rem;
+   height: 2px;
+   transform: translateY(-1rem)
+}
+    .image1,.image2,.image3,.image4
+    {
+        width: 150%;
+        height: 80%;
+    }
+    html
+    {
+        font-size: 42%;
+    }
+    .headerBtn
+    {
+        margin-top: 2rem;
+    }
+
+}
+@media only screen and (max-width:320px)
+{
+    .container
+    {
+       
+        grid-template-rows: 7vh min-content 55vh min-content 85vw 40vw repeat(3,min-content);
+        grid-template-columns:  minmax(5rem,1fr) repeat(6,minmax(min-content,20rem)) minmax(5rem,1fr);
+        grid-template-areas: "nav nav nav nav nav nav nav nav"
+                            "header header header header header header header header"
+                            "realtors realtors realtors realtors realtors realtors realtors realtors"
+                            ". services services services services services services ."
+                            "story story story story story story story story"
+                            "goals goals goals goals goals goals goals goals"
+                            ". homes homes homes homes homes homes ."
+                            "gallery gallery gallery gallery gallery gallery gallery gallery"
+                            "footer  footer  footer  footer  footer  footer  footer  footer ";
+    
+    }
+    .image1,.image2,.image3,.image4
+    {
+        width: 260%;
+        height: 120%;
+    }
+    html
+    {
+        font-size: 40%;
+    }
+    .ham
+    {
+        width: 3rem;
+        margin-top: -2rem;
+        height: 2px;
+    }
+    .ham::before
+    {
+       width: 3rem;
+       height: 2px;
+       transform: translateY(-1rem)
+    }
+}

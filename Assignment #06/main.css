@@ -1,0 +1,315 @@
+*{
+margin: 0px;
+padding: 0px;
+border: 0px;
+}
+body
+{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+.container
+{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-rows: 15fr 85fr;
+    grid-template-columns: 100fr;
+    grid-template-areas: "nav"
+                           "main";
+}
+.navbar
+{
+    display: grid;
+    grid-area: nav;
+    grid-template-rows: 100fr;
+    grid-template-columns: 15fr 40fr 11fr 11fr 8fr 15fr;
+    grid-template-areas: ". item1 item2 item3 item4 .";
+    grid-gap: 10px;
+    background: #365899;
+    color: #e9ebee;
+}
+.facebook 
+{
+    grid-area: item1;
+   display: flex;
+   font-size: 20px;
+   font-family: Arial, Helvetica, sans-serif;
+   align-items: center;
+    text-decoration: none;
+    color: #e9ebee;
+}
+label
+{
+    text-align: left;
+    
+}
+input
+{
+ 
+    height: 20px;
+     
+}
+.input1
+{
+    flex-flow: column;
+     grid-area: item2; 
+     
+}
+
+
+input[type=submit]
+{
+    width: 60px;
+    border: 1px solid white;
+     background: #365999;
+      height: 24px;
+    color: #e9ebee;
+}
+.input2
+{
+    flex-flow: column;
+     grid-area: item3;
+ 
+}
+.loginbutton
+{
+    display: flex;
+
+    align-items: center;
+    justify-content: flex-start;
+
+   grid-area: item4;
+   grid-gap: 5px;
+   
+  
+}
+
+.same
+{
+    display: flex;
+    justify-content: center;
+}
+.main
+{
+    display: grid;
+    grid-area: main;
+    grid-template-rows: 100fr;
+    grid-template-columns: 15fr 35fr 10fr 40fr;
+    grid-template-areas: ". content . form";
+    grid-gap: 10px;
+     background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0,0,0,0));
+    color: #1d2129;
+}
+.content
+{
+    display: grid;
+    grid-area: content;
+    grid-template-rows: 10fr 40fr 50fr;
+    grid-template-columns: 100fr;
+    grid-template-areas: "heading"
+                        "image"
+                          ".";
+    margin-top: 10%;
+    
+  
+    
+}
+.heading
+{
+    grid-area: heading;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+  
+}
+    .image
+    {
+        grid-area: image;
+        background: url(facebook-map.png);
+        background-size: 100% 100%,cover;
+        background-repeat: no-repeat; 
+
+    }
+    .form
+    {
+        grid-area: form;
+        display: grid;
+       grid-template-rows: 5fr repeat(4,11fr) 51fr;
+       grid-template-columns: repeat(2,40fr) 20fr;
+       grid-template-areas: ". . ."
+                            "header header ."
+                            "namefirst namesur ."
+                                "mobileno mobileno ."
+                                "passwordnew passwordnew ."
+                                "othercontent othercontent . ";
+/* margin-top: 25px; */
+
+        
+    }
+    .header
+    {
+        grid-area: header;
+       
+    }
+    .namefirst
+    {
+        grid-area: namefirst;
+        margin-top: 10px;
+        margin-inline-end: 10px;
+       
+       
+    }
+    .namesur
+    {
+        grid-area: namesur; 
+        margin-top: 10px;
+    }
+    .mobileno
+    {
+        margin-top: 6px;
+        grid-area: mobileno;
+        
+    }
+    .passwordnew
+    {
+        margin-top: 6px;
+        grid-area: passwordnew;
+        
+    }
+    .othercontent
+    {
+       margin-top: 10px;
+        grid-area: othercontent;
+        display: grid;
+        grid-template-rows:10fr repeat(5,18fr) ;
+        grid-template-columns: repeat(4,25fr);
+        grid-template-areas: "birth . . ."
+                            "date month year link"
+                            "radio radio  . ." 
+                            "para para para para "
+                            "button button . . "
+                            "par par par par";
+         font-family: Arial, Helvetica, sans-serif;
+         font-size: 18px;
+    }
+   
+
+    .form input
+    {  
+        border: 1px solid gray;
+        /* margin-top: 10px; */
+         height: 45px;
+        border-radius: 5px;
+        font-family: Arial, Helvetica, sans-serif;
+        padding-left: 10px;
+        outline: none;
+        font-size: 18px;
+    }
+    
+   select
+    {
+        display: block;
+        outline: none;
+        /* background: red; */
+         width: 90px;
+         font-family: Arial, Helvetica, sans-serif;
+         height: 35px;
+         padding-left: 10px;
+          font-size: 15px;
+          border: 1px solid gray;
+    }
+    .date
+    {
+        grid-area: date;
+       
+    }
+    .month
+    {
+    grid-area:month; 
+
+    }
+    .year
+    {
+    grid-area: year;
+    }
+    .link 
+    {
+        grid-area: link;
+       
+    }
+    .link a
+    {
+         text-decoration: none;
+    }
+   .link a:hover
+    {
+         text-decoration: underline;
+    }
+    a
+    {
+        color: #365999;
+       
+    }
+    
+    .para
+    {
+        grid-area: para;
+        
+        color:gray;
+    }
+    .para a
+    {
+    text-decoration: none;
+    }
+    .para a:hover
+    {
+        text-decoration: underline;
+    }
+    .par a:hover
+    {
+        text-decoration: underline;
+    }
+    .flex1
+    {
+    
+    display: flex;
+     font-size: 12px;
+   font-family: Arial, Helvetica, sans-serif;
+    }
+    .radio
+    {
+        grid-area: radio;
+        
+    }
+    .par
+    {
+        grid-area: par;
+        font-size: 18px;
+        color:gray;
+    }
+    .par a
+    {
+        font-size: 16px;
+        text-decoration: none;
+    }
+
+    .button
+    {
+        grid-area: button;
+        
+    }
+    .button input
+    {
+        background: rgba(0, 128, 21, 0.959);
+        width: 200px;
+        color: whitesmoke;
+    }
+   
+    .flex
+    {
+    display: flex;
+    flex-flow: column;
+     font-size: 18px;
+   font-family: Arial, Helvetica, sans-serif;
+    }

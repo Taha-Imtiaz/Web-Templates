@@ -1,0 +1,443 @@
+<html>
+<head>
+<meta charset="wtf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Website</title>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+<style>
+*{
+margin:0;
+padding:0;
+border:0;
+font-family: 'Oswald', sans-serif;
+ }
+body
+{
+width:100vw;
+height:100vh;
+overflow-x:hidden;
+
+
+}
+.container
+{
+width:100%;
+display: grid;
+height:100%;
+grid-template-rows:65fr 35fr;
+grid-template-columns:100fr;
+grid-template-areas:"upper"
+                    "lower";
+/* background:black; */
+background:  rgba(0, 0, 0,0.95);
+}
+
+.upper
+{
+display:grid;
+grid-area:upper;
+
+grid-template-rows:15fr 85fr;
+grid-template-columns:100fr;
+grid-template-areas:"nav"
+		             "main";
+            /* background:  rgba(0, 0, 0,0.92); */
+}
+.nav
+{
+display:grid;
+
+grid-area:nav;
+grid-template-rows:100fr;
+
+grid-template-columns:13fr 45fr repeat(7,6fr);
+grid-template-areas:"i1 . i3 i4 i5 i6 i7 i8 i9";
+
+background: rgba(0, 0, 0,0.99);
+font-size: 18px;
+grid-gap: 2px;
+}
+.main
+{
+display:grid;
+
+grid-area:main;
+grid-template-rows:100fr;
+
+grid-template-columns: repeat(4,25fr);
+grid-template-areas:"col1 col2 col3 col4";
+}
+.lower
+{
+display:grid;
+flex-flow: column;
+
+grid-area:lower;
+grid-template-rows:100fr;
+color: whitesmoke;
+grid-template-columns: 4fr repeat(4,23fr) 4fr;
+grid-template-areas:". list1 list2 list3 list4 .";
+}
+.list1
+{
+    grid-area: list1;
+    
+}
+.list2
+{
+   grid-area: list2; 
+}
+.list3
+{
+   grid-area: list3; 
+}
+.list4
+{
+   grid-area: list4; 
+}
+.col1
+{
+    display:grid;
+    grid-area: col1;
+    background: whitesmoke;
+    text-transform: uppercase;
+    flex-flow: column;
+    color: rgba(0, 0, 0,0.75);
+   
+    
+    grid-template-rows:repeat(2,50fr);
+    grid-template-columns: 100fr;
+    grid-template-areas:"image1"
+                         "content1"       ;
+
+}
+.image1
+{
+    grid-area: image1;
+    background: url(image.jpg);
+    background-size:100% 100%,cover; 
+     /* margin-top: 25px; */
+   
+
+    
+
+}
+
+.content1
+{
+    margin:25px; 
+    grid-area: content1;
+    transform: translateY(-33px);
+    /* margin-top: -10px; */
+    /* position: relative; */
+   
+    
+}
+
+.col2
+{
+    display:grid;
+    grid-area: col2;
+    background: rgb(255, 145, 0);
+    color:  rgba(0, 0, 0,0.8);
+    flex-flow: column;
+    grid-template-rows:repeat(2,50fr);
+    grid-template-columns: 100fr;
+    grid-template-areas:"image2"
+                         "content2"       ;
+
+
+}
+.image2
+{
+    grid-area: image2;
+    background: url(pencil.png);
+    background-size:100% 100%,cover; 
+     /* margin-top: 25px; */
+}
+
+.content2
+{
+    
+    grid-area: content2;
+    margin:25px; 
+     transform: translateY(-33px);
+}
+.col3
+{
+    display:grid;
+    grid-area: col3;
+    background:rgb(50, 50, 50);
+    color: rgb(255, 145, 0);
+    flex-flow: column;
+    grid-template-rows:repeat(2,50fr);
+    grid-template-columns: 100fr;
+    grid-template-areas:"image3"
+                         "content3" ;
+
+
+}
+
+.image3
+{
+   background: url(351798.jpg);
+    background-size:100% 100%,cover; 
+     /* margin-top: -20px; */
+    grid-area: image3;
+}
+.content3
+{
+   
+    grid-area: content3;  
+    margin:25px; 
+     transform: translateY(-33px);
+   
+
+}
+
+.col4
+{
+    display:grid;
+    grid-area: col4;
+    color: whitesmoke;
+    background:rgb(70, 70, 70) ;
+    flex-flow: column;
+    grid-template-rows:repeat(2,50fr);
+    grid-template-columns: 100fr;
+    grid-template-areas:"image4"
+                         "content4"       ;
+
+
+}
+.image4
+{
+     background: url(DSC_HiRes-1440x865.jpg);
+    grid-area: image4;
+    background-size:100% 100%,cover; 
+     /* margin-top: 25px; */
+    
+}
+
+.content4
+{
+    margin:25px; 
+     transform: translateY(-33px);
+    grid-area: content4;
+}
+p
+{
+    margin-top: 10px;
+    text-transform: capitalize;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+}
+.same
+{
+    display: flex;
+   justify-content:center;
+    align-items:center;
+}
+.similar
+{
+    /* margin-top: 50px; */
+    display: flex;
+    flex-flow: column;
+    text-transform: uppercase;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+}
+.pexcil
+{
+
+grid-area:i1;
+background:rgb(255, 145, 0);
+color:gray;
+/* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+font-size: 25px;
+text-transform :uppercase;
+}
+.about
+{
+grid-area:i3;
+color:white;
+/* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+font-size: 20px;
+text-transform :uppercase;
+}
+.services
+{
+
+grid-area:i4;
+color:white;
+/* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+font-size: 20px;
+text-transform :uppercase;
+}
+.work
+{
+
+grid-area:i5;
+color:white;
+/* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+font-size: 20px;
+text-transform :uppercase;
+}
+.contact
+{
+
+grid-area:i6;
+color:white;
+/* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+font-size: 20px;
+text-transform :uppercase;
+}
+.icon1
+{
+
+grid-area:i7;
+color:white;
+background: rgba(169, 169, 169, 0.473);
+background-size:100% 100%,cover; 
+background-repeat: no-repeat;
+}
+.similar h1
+{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+li
+{
+   margin-bottom: 2px;
+   list-style: circle;
+   text-align: left;
+    color: whitesmoke;
+    text-transform: capitalize;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.icon2
+{
+grid-area:i8;
+color:white;
+background: rgba(169, 169, 169, 0.473);
+background-size:100% 100%,cover; 
+ background-repeat: no-repeat;
+
+}
+.icon3
+{
+
+grid-area:i9;
+color:white;
+background: rgba(169, 169, 169, 0.473);
+background-size:100% 100%,cover; 
+background-repeat: no-repeat;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="upper">
+<div class="nav">
+<div class ="pexcil same">
+    <!-- <i class="far fa-square"></i> -->
+<h1>Pexcil</h1>
+</div>
+<div class="about same">About
+</div>
+
+<div class="services same">service
+</div>
+<div class="work same">work
+</div>
+<div class="contact same">contacts
+</div>
+<div class="icon1 same">
+<i class="fab fa-facebook-f"></i>
+
+</div>
+<div class="icon2 same">
+<i class="fab fa-twitter"></i>
+</div>
+<div class="icon3 same">
+<i class="fab fa-google-plus-g"></i>
+
+</div>
+</div>
+<div class= "main">
+    <div class="col1">
+        <div class="image1 similar">
+        </div>
+        <div class="content1 similar">
+            <h1>Strategy</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime culpa, maiores tempora praesentium odio et quos obcaecati eos optio reiciendis iste sint perspiciatis minima, doloribus quam perferendis assumenda provident minus!</p>
+        </div>
+    </div>
+    <div class="col2 ">
+        <div class="image2 similar"></div>
+        <div class="content2 similar">
+            <h1>CREATIVE</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id obcaecati aut laborum earum ullam accusamus amet quibusdam, consequatur culpa sed, cupiditate impedit excepturi officiis autem provident debitis nesciunt esse hic.</p>
+        </div>
+    </div>
+    <div class="col3 ">
+        <div class="image3 similar"> </div>
+        <div class="content3 similar">
+            <h1>Digital</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo soluta aut corporis ad dignissimos molestias error est. Quas labore, eveniet tempora corrupti placeat fuga distinctio officia molestiae cupiditate, id ipsam.</p>
+        </div>
+    </div>
+    <div class="col4 ">
+        <div class="image4 similar"></div>
+        <div class="content4 similar">
+            <h1>support</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt tempora consectetur eligendi at. Quis dignissimos dolorem aliquid. Qui esse magni tenetur facilis, mollitia repellat praesentium. Reiciendis optio velit cumque corrupti.</p>
+        </div>
+    </div>
+</div>
+</div> 
+<div class="lower">
+    <div class="list1 similar">
+        <h1>strategic services</h1>
+        <ul>
+            <li>Project Planning</li>
+            <li>User Interface (UI) Design </li>
+            <li>User Experience (UX) Design</li>
+            <li>WireFraming</li>
+        </ul>
+    </div>
+    <div class="list2 similar">
+        <h1>Creative services</h1>
+        <ul>
+            <li>Brand Development</li>
+            <li>Concept Development</li>
+            <li>Graphic Design</li>
+            <li>Art Direction</li>
+        </ul>
+    </div>
+    <div class="list3 similar">
+        <h1>DIGITAL SERVICES</h1>
+        <ul>
+            <li>Websites</li>
+            <li>Mobile apps</li>
+            <li>html and php</li>
+            <li>Css less and SASS</li>
+        </ul>
+    </div>
+    <div class="list4 similar">
+        <h1>CONTRACT SRVICES</h1>
+        <ul>
+            <li>Web Hosting</li>
+            <li>Website Management</li>
+            <li>Content Generation</li>
+            <li>Email Marketing</li>
+        </ul>
+    </div>
+</div>
+</div>
+</body>
+</html>

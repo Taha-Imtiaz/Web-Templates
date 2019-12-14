@@ -1,0 +1,599 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body
+{
+    overflow-x: hidden;
+}
+html
+{
+    font-size: 62.5%;
+}
+.flex
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container
+{
+    display: grid;
+    grid-template-rows: minmax(3vh,min-content) 10vh 16vh 30vh min-content minmax(50vh,min-content) minmax(20vh,min-content);
+    grid-template-columns: minmax(5rem ,1fr) minmax(min-content,115rem) minmax(5rem, 1fr);
+    grid-template-areas: "top top top" 
+                        "nav nav nav" 
+                        "Portfolio  Portfolio Portfolio " 
+                        ". details ." 
+                        ". form ."
+                        "contact contact contact"
+                         "features features features";
+/* margin-bottom: 5rem; */
+}
+/* top section */
+.top
+{
+    display: grid;
+    grid-area: top;
+    background: rgb(128, 212, 245);
+    font-size: 1.2rem;
+    font-family: 'Arial, Helvetica, sans-serif';
+    grid-template-columns: 55fr repeat(4,10fr) 5fr;
+    grid-template-areas: " . request chat call account .";
+}
+.request
+{
+    grid-area: request;
+    cursor: pointer;
+}
+.chat
+{
+    grid-area: chat;
+    cursor: pointer;
+}
+.call
+{
+    grid-area: call;
+    cursor: pointer;
+}
+.account
+{
+    grid-area: account;
+    cursor: pointer;
+}
+/* nav section */
+.nav
+{
+    grid-area: nav;
+    background: rgb(44, 190, 238);
+    font-size: 2rem;
+    font-family: 'Arial, Helvetica, sans-serif';
+}
+/* Portfolio Section */
+.Portfolio
+{
+    grid-area: Portfolio;
+    background: rgb(0, 0, 173);
+    display: grid;
+    grid-template-columns: 10fr 40fr 50fr;
+    grid-template-areas: ". headPortfolio .";
+
+}
+.headPortfolio
+{
+    grid-area: headPortfolio;
+    -webkit-text-fill-color: white;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: bold
+}
+
+
+/* details */
+.details
+{
+    grid-area: details;
+    margin: 5rem 0;
+}
+.details h1
+{
+margin: 1rem 0;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 2.8rem;
+color: rgba(46, 46, 46, 0.922)
+}
+.details p
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;  
+}
+
+/* form */
+
+.form
+{
+    grid-area: form;
+    display: grid;
+    grid-gap: 3.2rem;
+    grid-template-rows: repeat(2,35fr) 30fr;
+    grid-template-columns:  40fr repeat(2,30fr);
+    grid-template-areas: "input1 input2 input2"
+                           "input3 input4 input4"
+                            "  .       .    button  ";                   
+
+/* background: crimson */
+ }
+.input1
+{
+    grid-area: input1;
+    /* background: crimson */
+}
+.input2
+{
+    grid-area: input2;
+    /* background: cadetblue */
+}
+.input3
+{
+    grid-area: input3;
+    /* background: blueviolet */
+}
+.input4
+{
+    grid-area: input4;
+    /* background: chartreuse */
+    /* display: grid;
+    grid-template-columns: 5fr 95fr;
+    grid-template-areas: "option" "Input4"; */
+}
+.button
+{
+    grid-area: button;
+    padding: 0.8rem;
+    background: rgb(250, 21, 4);
+    border-radius: 0.5rem;
+    width: 20rem;
+    height: 3.5rem;
+    
+}
+.button h1
+{
+    text-transform: uppercase;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.8rem;
+}
+/* .option
+{
+    grid-area: option;
+}
+.Input4
+{
+    grid-area: Input4;
+} */
+.form input
+{
+    width: 50rem;
+    height: 5rem;
+    border-radius: 0.5rem;
+    /* outline: none; */
+    border: 2px solid rgb(172, 171, 171)
+}
+ ::placeholder
+{
+    padding-left: 2rem;
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif
+}
+/* contact */
+
+.contact
+{
+    grid-area: contact;
+    
+    margin-top: 12rem;
+     display: grid;
+    grid-template-rows: 40fr 60fr; 
+    /* grid-template-columns:  repeat(4,25fr) ; */
+    grid-template-areas: " contacts"
+                            " pics";
+    background: rgb(12, 43, 83);
+}
+.contacts h1
+{
+    margin: 3rem 0;
+    grid-area: contacts;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.8rem;
+}
+.pics
+{
+    grid-area: pics;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns:10fr  repeat(4,20fr) 10fr;
+    grid-template-areas: " .  pic1 pic2 pic3 pic4 .";
+
+}
+.pic1
+{
+grid-area: pic1;
+/* background: yellow */
+
+}
+.pic1  img
+{
+    width: 8rem;
+    grid-row: 1/span 2;
+    /* background: white */
+}
+.pic1 .detail1 
+{
+    padding-left: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    color: white
+}
+.pic2
+{
+grid-area: pic2;
+/* background: violet */
+}
+.pic2 img
+{
+    width: 8rem;
+    grid-row: 1/span 2;
+}
+.pic2 .detail2 
+{
+    padding-left: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    color: white
+}
+.pic3
+{
+grid-area: pic3;
+/* background: turquoise */
+}
+.pic3 img
+{
+    width: 8rem;
+    grid-row: 1/span 2;
+}
+ .pic3 .detail3  
+{
+    padding-left: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    color: white
+}
+.pic4
+{
+grid-area: pic4;
+/* background: rebeccapurple */
+}
+.pic4  img
+{
+    width: 8rem;
+    grid-row: 1/span 2;
+    /* background: white */
+}
+.pic4 .detail4 
+{
+    padding-left: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    color: white
+}
+
+/* features */
+.features
+{
+    grid-area: features;
+    display: grid;
+    grid-template-columns: 30fr 70fr;
+    grid-template-areas: "morefeture image";
+}
+.morefeture
+{
+    grid-area: morefeture;
+    background: red;
+    color: white;
+    font-size: 1.8rem;
+    /* top: calc(100%-25px) */
+}
+.image
+{
+    grid-area: image;
+    background: rgb(5, 5, 24);
+    width: 100%;
+    
+}
+
+@media only screen and (max-width:1200px)
+{
+  html
+  {
+      font-size: 55%;
+  }
+  .form input
+  {
+      width: 55rem;
+  }
+  .top
+  {
+      grid-template-columns: 45fr repeat(4,12fr) 7fr
+  }
+  .pics
+{
+    grid-area: pics;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns:  8fr  repeat(4,21fr) 8fr;
+    grid-template-areas: " .  pic1 pic2 pic3 pic4 .";
+
+}
+.pics p
+{
+    font-size: 1.4rem;
+}
+.pics h1
+{
+    font-size: 2rem;
+}
+}
+@media only screen and (max-width:1100px)
+{
+    html
+    {
+        font-size: 50%;
+    }
+    .form input
+    {
+        width: 50rem;
+    }
+    
+.pics img
+{
+    width: 6rem;
+}
+
+.features
+{
+    grid-area: features;
+    display: grid;
+    grid-template-rows: repeat(2,50fr);
+    grid-template-columns: 100fr;
+    grid-template-areas: "morefeture" 
+                            "image";
+}
+}
+@media only screen and (max-width:950px)
+{
+    html
+    {
+        font-size: 48%;
+    }
+    .pics
+{
+    grid-area: pics;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-rows: repeat(2,50fr);
+    grid-template-columns:  10fr  repeat(2,40fr) 10fr ;
+    grid-template-areas: " .  pic1 pic2 ." 
+                            ". pic3 pic4 .";
+
+}
+.form
+{
+    grid-gap: 3rem;
+}
+.form input
+{
+    width: 43rem;
+}
+.container
+{
+    display: grid;
+    grid-template-rows: minmax(3vh,min-content) 10vh 16vh 30vh min-content minmax(50vh,min-content) minmax(20vh,min-content);
+    grid-template-columns: minmax(5rem ,1fr) minmax(min-content,90rem) minmax(5rem, 1fr);
+    grid-template-areas: "top top top" 
+                        "nav nav nav" 
+                        "Portfolio  Portfolio Portfolio " 
+                        ". details ." 
+                        ". form ."
+                        "contact contact contact"
+                         "features features features";
+/* margin-bottom: 5rem; */
+}
+}
+@media only screen and (max-width:850px)
+{
+  
+html
+{
+    font-size: 47%;
+}
+.image img
+{
+    width: 90rem;
+}
+.details p
+{
+    margin: 3rem 0;
+}
+}
+@media only screen and (max-width:750px)
+{
+  
+   .form input
+{
+    width: 30rem;
+}
+
+.morefeture 
+{
+    font-size: 1.7rem;
+}
+.image img
+{
+    width: 80rem;
+}
+.container
+{
+    display: grid;
+    grid-template-rows: minmax(3vh,min-content) 10vh 16vh 30vh min-content minmax(50vh,min-content) minmax(20vh,min-content);
+    grid-template-columns: minmax(5rem ,1fr) minmax(min-content,65rem) minmax(5rem, 1fr);
+    grid-template-areas: "top top top" 
+                        "nav nav nav" 
+                        "Portfolio  Portfolio Portfolio " 
+                        ". details ." 
+                        ". form ."
+                        "contact contact contact"
+                         "features features features";
+/* margin-bottom: 5rem; */
+}
+.top
+ {
+   
+        grid-template-columns: 40fr repeat(4,14fr) 4fr;
+}
+}
+
+@media only screen and (max-width:630px)
+{
+    .form
+{
+    grid-area: form;
+    display: grid;
+    grid-gap: 3.2rem;
+    grid-template-rows: repeat(4,20fr) 20fr;
+    /* grid-template-columns:  75fr 25fr; */
+    grid-template-areas: "input1"
+                          "input2"
+                           "input3"
+                            "input4 "
+                            "   button  ";                   
+
+/* background: crimson */
+
+ }
+ .form input
+{
+    width: 43rem;
+}
+.image img
+{
+    width: 65rem;
+}
+.container
+{
+    display: grid;
+    grid-template-rows: minmax(3vh,min-content) 10vh 16vh 30vh min-content minmax(50vh,min-content) minmax(20vh,min-content);
+    grid-template-columns: minmax(5rem ,1fr) minmax(min-content,55rem) minmax(5rem, 1fr);
+    grid-template-areas: "top top top" 
+                        "nav nav nav" 
+                        "Portfolio  Portfolio Portfolio " 
+                        ". details ." 
+                        ". form ."
+                        "contact contact contact"
+                         "features features features";
+/* margin-bottom: 5rem; */
+}
+ }
+  @media only screen and (max-width:550px)
+ {
+     html
+     {
+         font-size: 40%;
+     }
+    
+
+    .pics
+    {
+        grid-area: pics;
+        display: grid;
+        grid-gap: 2rem;
+        
+        grid-template-rows: repeat(4,25fr);
+       
+        grid-template-areas: " .  pic1 " 
+                                ". pic2"
+                                ". pic3"     
+                                ". pic4"    ;
+
+    }
+    .container
+{
+    display: grid;
+    grid-template-rows: minmax(3vh,min-content) 10vh 16vh min-content min-content minmax(60vh,min-content) minmax(20vh,min-content);
+    grid-template-columns: minmax(5rem ,1fr) minmax(min-content,47rem) minmax(5rem, 1fr);
+    grid-template-areas: "top top top" 
+                        "nav nav nav" 
+                        "Portfolio  Portfolio Portfolio " 
+                        ". details ." 
+                        ". form ."
+                        "contact contact contact"
+                         "features features features";
+  
+}
+.pics img
+{
+    width: 4rem;
+}
+ }
+ @media only screen and (max-width:430px)
+ {
+    html
+    {
+        font-size: 35%;
+    }
+    .image img
+{
+    width: 50rem;
+}
+.top
+ {
+   
+        grid-template-columns: 30fr repeat(4,15fr) 10fr;
+}
+ }
+ @media only screen and (max-width:360px)
+ {
+    html
+    {
+        font-size:30%;
+    }
+   
+    .container
+    {
+        display: grid;
+        grid-template-rows: minmax(3vh,min-content) 10vh 16vh min-content min-content minmax(60vh,min-content) minmax(20vh,min-content);
+        grid-template-columns: minmax(5rem ,1fr) minmax(min-content,30rem) minmax(5rem, 1fr);
+        grid-template-areas: "top top top" 
+                            "nav nav nav" 
+                            "Portfolio  Portfolio Portfolio " 
+                            ". details ." 
+                            ". form ."
+                            "contact contact contact"
+                             "features features features";
+    
+    }
+    .form input
+    {
+        width: 30rem;
+    }
+    .top
+ {
+   
+        grid-template-columns: 30fr repeat(4,16fr) 6fr;
+}
+    .image img
+{
+    width: 45rem;
+}
+ } 

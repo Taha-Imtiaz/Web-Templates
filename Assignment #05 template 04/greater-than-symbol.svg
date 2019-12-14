@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Copyright 2017 mathsisfun.com -->
+<svg xmlns="http://www.w3.org/2000/svg" width="237.9" height="103.7" version="1.1">
+<defs>
+<marker id="id01" style="overflow:visible;" orient="auto">
+<path transform="matrix(-1.1,0,0,-1.1,-1.1,0)" style="fill:#f57900; stroke:black; stroke-width:0.63; stroke-linejoin:round;" d="M 8.7,4 -2.2,0 8.7,-4 C 7,-1.6 7,1.6 8.7,4 Z"/>
+</marker>
+<marker id="id02" style="overflow:visible;" orient="auto">
+<path transform="matrix(-1.1,0,0,-1.1,-1.1,0)" style="fill:#f57900; stroke:black; stroke-width:0.63; stroke-linejoin:round;" d="M 8.7,4 -2.2,0 8.7,-4 C 7,-1.6 7,1.6 8.7,4 Z"/>
+</marker>
+<marker id="id04" style="overflow:visible;" orient="auto">
+<path transform="matrix(-1.1,0,0,-1.1,-1.1,0)" style="fill:#f57900; stroke:black; stroke-width:0.63; stroke-linejoin:round;" d="M 8.7,4 -2.2,0 8.7,-4 C 7,-1.6 7,1.6 8.7,4 Z"/>
+</marker>
+<marker id="id03" style="overflow:visible;" orient="auto">
+<path transform="matrix(-1.1,0,0,-1.1,-1.1,0)" style="fill:#f57900; stroke:black; stroke-width:0.63; stroke-linejoin:round;" d="M 8.7,4 -2.2,0 8.7,-4 C 7,-1.6 7,1.6 8.7,4 Z"/>
+</marker>
+<marker style="overflow:visible;" orient="auto">
+<path transform="matrix(-0.8,0,0,-0.8,-10,0)" style="fill:black; stroke:black; stroke-width:1pt;" d="M 0,0 5,-5 -12.5,0 5,5 Z"/>
+</marker>
+</defs>
+<g transform="translate(-144.816,-381.171)">
+<path style="fill:none; stroke:#0084c8; stroke-width:10; stroke-linecap:round;" d="m 226.9,386.2 106.4,46.2"/>
+<path style="fill:none; stroke:#0084c8; stroke-width:10; stroke-linecap:round;" d="M 226.9,479.8 333.3,433.6"/>
+<text x="141.3" y="445.1" style="font-family:'Comic Sans MS'; font-size:37.7px; fill:#f57900; stroke-width:1px;">BIG</text>
+<text x="352.2" y="439.1" style="font-family:'Comic Sans MS'; font-size:13.6px; fill:#f57900; stroke-width:1px;">small</text>
+<path style="fill:none; stroke:#f57900; stroke-width:1px;" d="M 205,383 H 166"/>
+<path style="fill:none; stroke:#f57900; stroke-width:1px;" d="M 205,483.7 H 166"/>
+<path style="marker-end:url(#id01); fill:#f57900; stroke:black; stroke-width:1;" d="M 174.6,412.8 V 385.2"/>
+<path style="marker-end:url(#id02); fill:#f57900; stroke:black; stroke-width:1;" d="m 174.6,453.6 v 27.6"/>
+<path style="fill:#ff9900; stroke:#ff9900; stroke-width:1px;" d="M 376,442.1 H 342.7"/>
+<path style="marker-end:url(#id03); fill:#f57900; stroke:black; stroke-width:1;" d="M 367.4,472 V 444.4"/>
+<path style="fill:#ff9900; stroke:#ff9900; stroke-width:1px;" d="M 376,426.3 H 342.7"/>
+<path style="marker-end:url(#id04); fill:#f57900; stroke:black; stroke-width:1;" d="m 367.4,396.2 v 27.6"/>
+</g>
+</svg>

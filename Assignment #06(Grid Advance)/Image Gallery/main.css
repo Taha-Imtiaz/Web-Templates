@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.container
+{
+    display: grid;
+    grid-template-rows: 10vh minmax(80vh,min-content) 10vh;
+    grid-template-columns: minmax(50px,1fr) minmax(300px,90vw) minmax(50px,1fr);
+    grid-template-areas: "nav nav nav"
+                        ". main ."
+                        "footer footer footer";
+}
+.nav
+{
+    grid-area: nav;
+    background: darkviolet;
+    color: rgb(37, 24, 16);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: underline;
+    
+}
+.main
+{
+   
+    grid-area: main;
+     display: grid;
+     /* background: darkred; */
+    grid-template-columns: repeat(auto-fit,300px);
+    justify-content: center;
+    align-content: start;
+
+}
+.img
+{
+    width: 300px;
+    height: 300px;
+}
+.img1
+{
+    background: url("images/image1.jpg");
+    background-size: 100% 100%,cover;
+}
+.img2
+{
+    background: url("images/image2.jpg");
+    background-size: 100% 100%,cover;
+}
+.img3
+{
+    background: url("images/image3.jpg");
+    background-size: 100% 100%,cover;
+}
+.img4
+{
+    background: url("images/image4.jpg");
+    background-size: 100% 100%,cover;
+}
+.img5
+{
+    background: url("images/image5.jpg");
+    background-size: 100% 100%,cover;
+}
+.img6
+{
+    background: url("images/image6.jpg");
+    background-size: 100% 100%,cover;
+}
+.img7
+{
+    background: url("images/image7.jpg");
+    background-size: 100% 100%,cover;
+}
+.img8
+{
+    background: url("images/image8.jpg");
+    background-size: 100% 100%,cover;
+}
+.img9
+{
+    background: url("images/image9.jpg");
+    background-size: 100% 100%,cover;
+}
+.img10
+{
+    background: url("images/image10.jpg");
+    background-size: 100% 100%,cover;
+}
+.img11
+{
+    background: url("images/image11.jpg");
+    background-size: 100% 100%,cover;
+}
+.img12
+{
+    background: url("images/image12.jpg");
+    background-size: 100% 100%,cover;
+}
+.img13
+{
+    background: url("images/image13.jpg");
+    background-size: 100% 100%,cover;
+}
+.img14
+{
+    background: url("images/image14.jpg");
+    background-size: 100% 100%,cover;
+}
+.img15
+{
+    background: url("images/image15.jpg");
+    background-size: 100% 100%,cover;
+}
+.img16
+{
+    background: url("images/image16.jpg");
+    background-size: 100% 100%,cover;
+}
+.footer
+{
+    grid-area: footer;
+    background: deeppink;
+}

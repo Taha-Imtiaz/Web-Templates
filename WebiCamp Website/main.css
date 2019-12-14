@@ -1,0 +1,424 @@
+*{
+    margin: 0;
+    padding:0;
+    border: 0;
+}
+body
+{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+.flex
+{
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+.container
+{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 100fr;
+    grid-template-columns: 20fr 80fr;
+    grid-template-areas: "content image";
+
+}
+.content
+{
+    grid-area: content;
+    display: grid;
+    grid-area: content;
+    grid-template-rows: 5fr 15fr 50fr 10fr 20fr;
+    grid-template-columns: 5fr 80fr 15fr;
+    grid-template-areas: ". . ."
+                        ". icon ."
+                        ". . ."
+                        ". para ."
+                        " . . .";
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    background: rgb(62, 22, 8);
+}
+.para
+{
+    grid-area: para;
+    padding-left: 10px;
+}
+.para p
+{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 28px;   
+}
+.para h3
+{
+    margin-top: 6px;
+}
+.icon
+{
+    grid-area: icon;
+    background: url("assets//ll.png");
+    background-size:100% 100%,cover;
+    background-repeat: no-repeat; 
+}
+.image
+{
+    grid-area: image;
+    display: grid;
+    color: white;
+    background: url("assets//bg.jpg");
+    background-size: 100% 100%,cover;
+    background-repeat: no-repeat;
+    grid-template-rows: 40fr 20fr repeat(2,10fr) 20fr;
+    grid-template-columns: 100fr;
+    grid-template-areas: ". header . img .";
+   
+   
+}
+.header
+{
+    grid-area: header;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+}
+.header h1
+{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 82px;
+    padding-left: 70px;
+    letter-spacing: 0.07em;
+    margin-bottom: 15px;
+}
+.header p
+{
+    margin-bottom: 15px;
+}
+.header h4
+{
+    padding-left: 70px;
+}
+.flex1
+{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.img
+{
+    grid-area: img;
+   
+     background: url("assets//main.png");
+    background-size:100% 100%,cover;
+    background-repeat: no-repeat;
+}
+.container2
+{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 15fr 70fr 15fr ;
+    grid-template-columns: 5fr 40fr 10fr 40fr 5fr;
+    grid-template-areas: ". . . . ."
+                        ". para1 . para2 ." 
+                        ". . . . .";
+}
+.para1
+{
+    display: grid;
+    grid-area: para1;
+    grid-template-rows: 10fr 90fr;
+    grid-template-columns: 100fr;
+    grid-template-areas: "pic11"
+                        "par1";
+  
+    /* background: green; */
+}
+.para2
+{
+    display: grid;
+    grid-area: para2;
+    grid-template-rows: 10fr 90fr;
+    grid-template-columns: 100fr;
+    grid-template-areas: "pic22"
+                        "par2";
+    /* background: blue; */
+}
+.pic11
+{
+    grid-area: pic11;
+    background: url("assets//tahaa.png");
+    background-size:100% 100%,cover;
+    /* background-repeat: no-repeat; */
+}
+.pic22
+
+{
+    grid-area: pic22;
+      background: url("./assets//Taha.png");
+    background-size:100% 100%,cover;
+    /* background-repeat: no-repeat; */
+}
+.par1
+{
+    grid-area: par1;
+      color:  rgb(82, 52, 52);
+    line-height: 1.7em;
+    /* background: blue; */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+}
+.par2
+{
+    grid-area: par2;
+     color:  rgb(82, 52, 52);
+    line-height: 1.7em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+}
+.par1 h1
+{
+    margin-bottom: 30px;
+}
+.par2 h1
+{
+    margin-bottom: 30px;
+}
+.container3
+{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 30fr 20fr 30fr 20fr ;
+    grid-template-columns: repeat(2,50fr);
+    grid-template-areas: "col1 col2"
+                            ". . "
+                             "parag1 parag1"
+                           ". . ";
+
+}
+.col1
+{
+    grid-area: col1;
+    background:  rgb(177, 126, 94);
+     color: rgb(42, 2, 8);
+     font-family: Arial, Helvetica, sans-serif;
+   font-size: 29px;
+   letter-spacing: 0.1em;
+   border: 1px solid rgb(42, 2, 8);
+}
+.col1 p
+{
+    margin-bottom: 8px;
+     font-size: 22px;
+}
+
+.col2
+{
+    grid-area: col2;
+     background:  rgb(177, 126, 94);
+     color: rgb(42, 2, 8);
+     font-family: Arial, Helvetica, sans-serif;
+   font-size: 59px;
+   letter-spacing: 0.1em;
+    border: 1px solid rgb(42, 2, 8);
+}
+.col2 p
+{
+    margin-bottom: 8px;
+     font-size: 42px;
+}
+.col1 input[type=button]
+{
+ outline: none;
+margin-top: 15px;
+width: 250px;
+text-transform: uppercase;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 29px;
+height: 50px;
+background:  rgb(177, 126, 94);
+ letter-spacing: 0.1em;
+color: rgb(62, 2, 8);
+border: 2px solid rgb(62, 2, 8);
+}
+ .col1 input:hover
+{
+
+background: rgb(52, 2, 8);
+color: rgb(182, 117, 77);
+}
+.parag1
+{
+    grid-area: parag1;
+    /* transform: translateX(-166px); */
+    color: rgb(62, 2, 8);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 34px;
+   
+}
+.parag1 p
+{
+    margin:10px; 
+}
+.p1
+{
+    /* transform: translateX(-33px); */
+    font-size: 39px;
+}
+input[type=button]
+{
+margin-top: 15px;
+transform: translateX(13px);
+width: 250px;
+text-transform: uppercase;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 25px;
+height: 50px;
+ outline: none;
+background:  white;
+letter-spacing: 0.2em;
+color: rgb(62, 2, 8);
+border: 2px solid rgb(42, 2, 8);
+}
+ .parag1 input:hover
+{
+
+background: rgb(52, 2, 8);
+color: white;
+}
+.container4
+{
+      width: 100%;
+    height: 30%;
+    display: grid;
+    grid-template-rows: 100fr  ;
+    grid-template-columns: repeat(3,33fr);
+    grid-template-areas: "column1 column2 column3";
+    background: url("assets//FEE1.jpg")
+                                
+}
+.list
+{
+      grid-area: column1;
+}
+.list h2
+{
+    
+    color: white;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:22px;
+}
+.list2
+{
+      grid-area: column2;
+      color: white;
+}
+.list2 h1
+{
+    margin-bottom: 15px;
+}
+.list2 h2
+{
+    
+  
+    
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:22px;
+}
+.list3
+{
+      grid-area: column3;
+      color: white;
+}
+.list3 h1
+{
+    margin-bottom: 15px;
+}
+.list3 h2
+{
+   
+  
+    
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:22px;
+}
+.container5
+{
+      width: 100%;
+    height: 70%;
+    display: grid;
+    grid-template-rows: 10fr 25fr 10fr 25fr  ;
+    grid-template-columns: 100fr;
+    grid-template-areas: ".  "
+                        "row1 "
+                        ". "
+                        "footer ";
+}
+.row1
+{
+    grid-area: row1;
+    display: grid;
+    grid-template-rows: 100fr;
+    grid-template-columns: repeat(2,50fr);
+   grid-template-areas: "firstrow secondrow";
+   color: rgb(52, 2, 8);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:22px;
+    
+
+}
+.firstrow
+{
+    grid-area: firstrow;
+    border: 2px solid rgb(42, 2, 8);
+}
+.secondrow
+{
+    grid-area: secondrow;
+    border: 2px solid rgb(42, 2, 8);
+}
+.footer
+{
+    grid-area: footer;
+    display: grid;
+    grid-template-rows:90fr 10fr;
+    grid-template-columns: repeat(2,50fr);
+    grid-template-areas: "firstcol secondcol"
+                            "copyrights copyrights";
+    background: rgb(42, 22, 8);
+     color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:22px; 
+    border: 2px solid rgb(12, 1, 2);
+}
+.firstcol
+{
+    grid-area: firstcol;
+    padding-left: 60px;
+   
+}
+.secondcol
+{
+    grid-area: secondcol;
+    padding-left: 60px;
+}
+.secondcol p
+{
+    margin-bottom: 20px;
+}
+.copyrights
+{
+    grid-area: copyrights;
+    font-size: 14px;
+     
+}

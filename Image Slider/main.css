@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body
+{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+.container
+{
+    width: 100%;
+    height: 100%;
+    background: lightcoral;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+   
+}
+.images
+
+{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(6,1fr);
+    animation: slider 30s linear infinite forwards;
+    position: relative;
+    width: 600%;
+}
+.images img
+{
+    left: 20%;
+    right: 20%;
+    width: 80%;
+    height: 75%;
+    justify-self: center;
+    align-self: center;
+}
+@keyframes slider
+{
+    0%,12%
+    {
+        left: 0%;
+        background: lightgreen;
+       
+    }
+
+    17%,29%
+    {
+        left: -100%;
+        background: red;
+    }
+    34%,47%
+    {
+        left: -200%;
+        background: navy;
+    }
+    52%,65%
+    {
+        left: -300%;
+        background: orange;
+    }
+    70%,83%
+    {
+        left: -400%;
+        background: mediumvioletred;
+    }
+  
+   88%,100%
+   {
+       left: -500%;
+       background: maroon;
+   }
+}

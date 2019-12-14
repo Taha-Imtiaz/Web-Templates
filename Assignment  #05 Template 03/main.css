@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+    border:0;
+}
+body
+{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    
+}
+.container
+{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(4,25fr);
+    grid-template-columns: 5fr 15fr 5fr 10fr repeat(4,15fr) 5fr;
+    grid-template-areas: ". i1 . . . . . . ."
+                        ". . . i2 i2 i2 i3 i4 ."
+                        ". i5 i6 i6 i7 i8 i9 i10 ."
+                          ". . . . i11 i12 i13 . ."    ;
+    background: url(dark+times.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100% ,cover;
+}
+.i1
+{
+    grid-area: i1;
+    display: flex;
+    background: rgb(255, 136, 0);
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 50px;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.para
+{
+    margin-top: 15px;
+    padding-left: 15px;
+}
+.i2
+{
+    grid-area: i2;
+    display: flex;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* font-size: 20px; */
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.i3
+{
+    grid-area: i3;
+    display: flex;
+    background: rgb(255, 38, 0);
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.i4
+{
+    grid-area: i4;
+    display: flex;
+    background: url(hall-interior-west-view.jpg);
+    background-size: 100% 100% ,cover;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.i5
+{
+    grid-area: i5;
+    display: flex;
+    background: url(AA043900.jpg);
+    background-size: 100% 100% ,cover;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.i6
+{
+    grid-area: i6;
+    display: flex;
+   background: rgb(255, 38, 0);
+    /* background-size: 100% 100% ,cover;
+    background-repeat: no-repeat; */
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.i7
+{
+    grid-area: i7;
+    display: flex;
+  background: rgb(255, 136, 0);
+    /* background-size: 100% 100% ,cover;
+    background-repeat: no-repeat; */
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.i8
+{
+    grid-area: i8;
+    display: flex;
+    background: url(download.jpg);
+    background-size: 100% 100% ,cover;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.i9
+{
+    grid-area: i9;
+    display: flex;
+    background: url(hampton-bay-outdoor-loveseat-cushions-frvs4cu-set-gr-64_1000.jpg);
+    background-size: 100% 100% ,cover;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.i10
+{
+    grid-area: i10;
+    display: flex;
+  background: rgb(255, 136, 0);
+    /* background-size: 100% 100% ,cover;
+    background-repeat: no-repeat; */
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.i11
+{
+    grid-area: i11;
+    display: flex;
+    background: url(downlo.jpg);
+    background-size: 100% 100% ,cover;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.i12
+{
+    grid-area: i12;
+    display: flex;
+    background: url(K1966_015_o2.jpg);
+    background-size: 100% 100% ,cover;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.i13
+{
+    grid-area: i13;
+    display: flex;
+  background: rgb(255, 136, 0);
+    /* background-size: 100% 100% ,cover;
+    background-repeat: no-repeat; */
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+}
